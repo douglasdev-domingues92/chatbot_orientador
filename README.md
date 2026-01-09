@@ -1,92 +1,91 @@
-# 🤖 Chatbot Orientador Técnico – Ciência de Dados
+# Chatbot Orientador Técnico – Ciência de Dados
 
-Chatbot orientador técnico especializado em **Ciência de Dados**, **Machine Learning** e **carreira em tecnologia**, utilizando a API do **Google Gemini**.
+Este projeto apresenta um **chatbot orientador técnico** voltado à área de Ciência de Dados, Machine Learning e carreira em tecnologia, com foco em **diagnóstico de nível técnico**, **identificação de lacunas conceituais** e **proposição de trilhas de aprendizado realistas**.
 
-O projeto foi desenvolvido com foco em **modularidade e reutilização**, permitindo que a lógica central do chatbot seja facilmente integrada em diferentes contextos, como:
-
-- Execução via CLI
-- APIs (FastAPI, Flask, etc.)
-- Aplicações web
-- Serviços serverless
+Diferente de assistentes genéricos, o chatbot foi projetado para atuar de forma **crítica e estruturada**, priorizando fundamentos técnicos e evitando recomendações superficiais baseadas apenas em ferramentas ou tendências.
 
 ---
 
-## 🚀 Quick Start
+## Objetivo
 
-```bash
-pip install -r requirements.txt
-python chatbot.py
-```
+Apoiar profissionais que desejam migrar ou evoluir em Ciência de Dados a partir de orientação técnica mais próxima da realidade do mercado, abordando questões como:
+
+- Avaliação do nível técnico real do usuário  
+- Identificação de lacunas conceituais relevantes  
+- Correção de premissas frágeis ou ilusões de competência  
+- Definição de trilhas de aprendizado em curto, médio e longo prazo  
+- Priorização de fundamentos (estatística, ML, programação) antes de ferramentas
+
+O chatbot **não substitui mentoria humana** e **não tem caráter motivacional**, sendo utilizado como apoio estruturado à tomada de decisão sobre aprendizado e evolução técnica.
+
 ---
 
-# 📌 Objetivo
+## Escopo de Atuação
 
-Fornecer **orientação técnica estruturada, realista e fundamentada** para profissionais que desejam:
-- Migrar para Ciência de Dados
-- Evoluir tecnicamente na área
-- Identificar lacunas de conhecimento
-- Construir trilhas de aprendizado sólidas
+- Ciência de Dados  
+- Machine Learning  
+- Estatística Aplicada  
+- Programação (principalmente Python)  
+- Desenvolvimento de carreira técnica em tecnologia  
 
-O chatbot foi projetado para:
-- Adaptar a linguagem ao nível técnico do usuário
-- Priorizar fundamentos técnicos sólidos
-- Questionar premissas frágeis ou superficiais
-- Evitar respostas genéricas ou motivacionais
 ---
 
-# 📂 Estrutura do Projeto
-```bash
+## Arquitetura e Design
+
+- A lógica de negócio do chatbot é desacoplada do meio de execução  
+- O comportamento do modelo é definido explicitamente via prompt versionado  
+- A implementação atual utiliza a API do Google Gemini  
+- O projeto foi desenhado para facilitar reutilização em diferentes contextos, como:
+  - Execução via linha de comando (CLI)
+  - APIs REST (FastAPI, Flask)
+  - Aplicações web
+  - Serviços serverless
+
+---
+
+## Estrutura do Projeto
+
+```text
 .
-├── chatbot.py              # Lógica principal do chatbot
-├── prompts.py              # System prompt e instruções do modelo
-├── requirements.txt        # Dependências do projeto
-├── .env                    # Variáveis de ambiente (API Key)
+├── chatbot.py        # Orquestração da conversa e interação com o modelo
+├── prompts.py        # Definição do comportamento e escopo do orientador
+├── requirements.txt  # Dependências do projeto
+├── .env              # Variáveis de ambiente (não versionado)
 └── README.md
 ```
----
 
-# ⚙️ Pré-requisitos
+## Pré-requisitos
 - Python 3.9 ou superior
 - Conta no Google AI Studio
 - Chave de API do Google Gemini
 ---
 
-# 🔐 Variáveis de Ambiente
-- Crie um arquivo .env na raiz do projeto com o seguinte conteúdo:
+## Variáveis de Ambiente
 ```bash
 GEMINI_API_KEY=SEU_TOKEN_DO_GEMINI_AQUI
 ```
 ---
 
-# 📦 Instalação
+## Execução Local (CLI)
 ```bash
 pip install -r requirements.txt
-```
----
-
-# ▶️ Execução Local (CLI)
-```bash
 python chatbot.py
 ```
 ---
 
-# 🧠 Arquitetura e Design
-- A lógica do chatbot é **independente do meio de execução**
-- O comportamento do modelo é definido em prompts.py, facilitando ajustes, versionamento e experimentação
-- O projeto pode ser facilmente adaptado para:
-    - APIs REST
-    - Interfaces web
-    - Aplicações serverless
+## Extensões Futuras
+- Exposição via API REST
+- Interface web
+- Persistência de histórico de interação
+- Avaliação quantitativa da qualidade das recomendações
+
+Essas extensões não fazem parte deste repositório, pois o foco do projeto é o **desenho do comportamento do orientador**, e não a camada de apresentação.
+
 ---
 
-# 🔌 Integração com APIs (Visão Geral)
-A lógica presente em **chatbot.py** pode ser reutilizada diretamente em frameworks como FastAPI ou Flask, expondo o chatbot como um endpoint HTTP.
-- Esta implementação não está incluída neste repositório e deve ser realizada conforme o contexto da aplicação consumidora.
----
+## Licença
 
-# 📄 Licença
+Projeto disponibilizado para fins educacionais e experimentais.
 
-Este projeto é disponibilizado para fins educacionais e de estudo.
-Adapte conforme suas necessidades.
 
 
